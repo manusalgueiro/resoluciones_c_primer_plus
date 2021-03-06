@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Chapter 5">
+		<Project filename="addemup/addemup.cbp" />
+		<Project filename="cmftin/cmftin.cbp" />
+		<Project filename="cubed/cubed.cbp" />
+		<Project filename="daysweek/daysweek.cbp" />
+		<Project filename="fahrenheit/fahrenheit.cbp" />
+		<Project filename="hrsandmin/hrsandmin.cbp" />
+		<Project filename="modulus/modulus.cbp" />
+		<Project filename="plusten/plusten.cbp" />
+		<Project filename="sqrday/sqrday.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

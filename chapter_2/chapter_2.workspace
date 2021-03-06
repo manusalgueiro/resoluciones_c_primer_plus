@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Chapter 2">
+		<Project filename="countries/countries.cbp" />
+		<Project filename="hurray/hurray.cbp" />
+		<Project filename="nameaddr/nameaddr.cbp" />
+		<Project filename="nestfunc/nestfunc.cbp" />
+		<Project filename="smile/smile.cbp" />
+		<Project filename="toes/toes.cbp" />
+		<Project filename="yourage/yourage.cbp" />
+		<Project filename="yourname/yourname.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

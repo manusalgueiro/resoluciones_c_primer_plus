@@ -1,0 +1,312 @@
+Chapter 6: 
+
+Review Questions
+------ ---------
+
+1-Find the value of quack after each line; each of the final five statements uses the value of
+quack produced by the preceding statement.
+
+int quack = 2;	// quack is initialized by 2
+quack += 5;	// quack is now 2+5 => 7
+quack *= 10;	// quack is now 7*10 => 70
+quack -= 6;	// quack is now 70-6 => 64
+quack /= 8;	// quack == 64 / 8 == 8
+quack %= 3;	// the new value of quack is the remainder of 8 divided by 3 ==> 2
+
+2-Given that value is an int , what output would the following loop produce?
+
+for ( value = 36; value > 0; value /= 2)
+	printf("%3d", value);
+
+36
+18
+9
+4
+2
+1
+
+What problems would there be if value were double instead of int ?
+If the value would have been double, the loop would keep going until it reaches
+the minimum float possible, while printf would show zeros after reaching 1, because
+the format is intended for integers.
+
+3-Represent each of the following test conditions:
+
+a. x is greater than 5 .
+
+	x > 5
+
+b. scanf() attempts to read a single double (called x ) and fails.
+
+	scanf("%f", &x) == 0
+
+c. x has the value 5 .
+
+	x == 5
+
+4-Represent each of the following test conditions:
+
+a. scanf() succeeds in reading a single integer.
+
+	scanf("%d", &x) == 1	// x is an int variable
+
+b. x is not 5 .
+
+	x != 5
+
+c. x is 20 or greater.
+
+	x >= 20
+
+5-You suspect that the following program is not perfect. What errors can you find?
+
+#include <stdio.h>
+
+int main(void)
+{							/* line 3 */
+	int i, j, list(10);				/* line 4 */
+	
+	for (i = 1, i <= 10, i++)			/* line 6 */
+	{						/* line 7 */
+		list[i] = 2*i + 3;			/* line 8 */
+		for (j = 1, j > = i, j++)		/* line 9 */
+			printf(" %d", list[j]);		/* line 10 */
+		printf("\n");				/* line 11 */
+}
+
+- list array should be defined with the size enclosed by brackets, not parenthesis
+- the inner for is never executed (the test is never satisfied): j <= i instead
+- inner for matching curly brace is missing
+
+6-Use nested loops to write a program that produces this pattern:
+$$$$$$$$
+$$$$$$$$
+$$$$$$$$
+$$$$$$$$
+
+const int ROWS 4;
+const int COLS 8;
+
+for (int i = 0; i < ROWS; i++)
+{
+	for (int j = 0; j < COLS; j++)
+	{
+		print("$");
+	}
+	printf("\n");
+}
+
+7-What will each of the following programs print?
+a.
+#include <stdio.h>
+int main(void)
+{
+	int i = 0;
+	while (++i < 4)
+		printf("Hi! ");
+	do
+		printf("Bye! ");
+	while (i++ < 8);
+	return 0;
+}
+
+Output: Hi! Hi! Hi! Bye! Bye! Bye! 
+ 
+b.
+#include <stdio.h>
+int main(void)
+{
+	int i;
+	char ch;
+	for (i = 0, ch = 'A'; i < 4; i++, ch += 2 * i)
+		printf("%c", ch);
+	return 0;
+}
+
+Output: ACE
+
+8-Given the input Go west, young man! , what would each of the following programs
+produce for output? (The ! follows the space character in the ASCII sequence.)
+
+a.
+#include <stdio.h>
+int main(void)
+{
+	char ch;
+	scanf("%c", &ch);
+	while ( ch != 'g' )
+	{
+		printf("%c", ch);
+		scanf("%c", &ch);
+	}
+	return 0;
+}
+
+Input: Go west, young man!
+Output: Go west, youn
+
+b.
+#include <stdio.h>
+int main(void)
+{
+	char ch;
+	scanf("%c", &ch);
+	while ( ch != 'g' )
+	{
+		printf("%c", ++ch);
+		scanf("%c", &ch);
+	}
+	return 0;
+}
+
+Input: Go west, young man!
+Output: Hp!xftu-zpvo
+
+c.
+#include <stdio.h>
+int main(void)
+{
+	char ch;
+	do {
+		scanf("%c", &ch);
+		printf("%c", ch);
+	} while ( ch != 'g' );
+	return 0;
+}
+
+Input: Go west, young man!
+Output: Go west, young
+
+d.
+#include <stdio.h>
+int main(void)
+{
+	char ch;
+	scanf("%c", &ch);
+	for ( ch = '$'; ch != 'g'; scanf("%c", &ch) )
+		printf("%c", ch);
+	return 0;
+}
+
+Input: Go west, young man!
+Output: $o west, youn
+
+9-What will the following program print?
+
+#include <stdio.h>
+int main(void)
+{
+	int n, m;
+	n = 30;
+	
+	while (++n <= 33)
+		printf("%d|",n);
+	
+	n = 30;
+	do
+		printf("%d|",n);
+	while (++n <= 33);
+
+	printf("\n***\n");
+
+	for (n = 1; n*n < 200; n += 4)
+		printf("%d\n", n);
+	
+	printf("\n***\n");
+
+	for (n = 2, m = 6; n < m; n *= 2, m+= 2)
+	printf("%d %d\n", n, m);
+	
+	printf("\n***\n");
+	
+	for (n = 5; n > 0; n--)
+	{
+		for (m = 0; m <= n; m++)
+			printf("=");
+		printf("\n");
+	}
+	return 0;
+}
+
+Output:
+
+31|32|33|30|31|32|33|
+***
+1
+5
+9
+13
+***
+2 6
+4 8
+8 10
+***
+=====
+====
+===
+==
+=
+
+10-Consider the following declaration:
+
+double mint[10];
+
+	a. What is the array name? mint
+	b. How many elements does the array have? 10
+	c. What kind of value can be stored in each element? double precision floating point values
+	d. Which of the following is a correct usage of scanf() with this array?
+		i. scanf("%lf", mint[2])
+		ii. scanf("%lf", &mint[2])
+		iii. scanf("%lf", &mint)
+		
+		The correct statement is "i"
+
+11-Mr. Noah likes counting by twos, so he’s written the following program to create an array
+and to fill it with the integers 2, 4, 6, 8, and so on. What, if anything, is wrong with this
+program?
+
+#include <stdio.h>
+#define SIZE 8
+int main(void)
+{
+	int by_twos[SIZE];
+	int index;
+	
+	for (index = 1; index <= SIZE; index++)
+		by_twos[index] = 2 * index;
+	
+	for (index = 1; index <= SIZE; index++)
+		printf("%d ", by_twos);
+	
+	printf("\n");
+	return 0;
+}
+
+In the test of the first for, Noah is trying to adress an index beyond the
+size of the array (if SIZE is 8, the maximum index of by_twos is 7).
+
+12-You want to write a function that returns a long value. What should your definition of
+the function include?
+
+long function_name(parameters);	// For long integers
+
+13-Define a function that takes an int argument and that returns, as a long , the square of
+that value.
+
+long my_square(int number)
+{
+	long answer = 1;
+
+	answer = number*number;
+	return answer;
+}
+
+14-What will the following program print?
+#include <stdio.h>
+int main(void)
+{
+	int k;
+	for(k = 1, printf("%d: Hi!\n", k); printf("k = %d\n",k), k*k < 26; k+=2, printf("Now k is %d\n", k) )
+		printf("k is %d in the loop\n",k);
+	return 0;
+}

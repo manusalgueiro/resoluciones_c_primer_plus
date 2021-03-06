@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1614199095 source:c:\users\manus\dev\cprimer\chapter_6\letterpattern\main.c
+	<stdio.h>
+	<stdlib.h>
+

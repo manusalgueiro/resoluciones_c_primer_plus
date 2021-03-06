@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1614209927 source:c:\users\manus\dev\cprimer\chapter_6\letterpyramid\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+

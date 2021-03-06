@@ -1,0 +1,66 @@
+Review Questions
+
+1-Which data type would for each of the following kinds of data:
+
+a-The population of East Simpleton: unsigned long long or uint64_t
+
+b-The cost of a movie in DVD: float
+
+c-The most common letter in this chapter: char
+
+d-The number of times that the letter occurs in this chapter: unsigned int or uint32_t
+
+2-Why would you use a type long variable instead of type int?
+
+	Because the number/s is greater than the maximum int value for the given
+system.
+
+3-What portable types might you use to get a 32-bit signed integer, and what
+would the rationale be for each choice?
+
+	I would use fixed size integer types, such as int32_t, defined in the
+sdint.h library header file.
+
+4-Identify the type and meaning, if any, of each of the following constants:
+
+a- '\b' Escape character
+b- 1066 Integer type
+c- 99.44 Floating point type
+d- 0XAA Integer type, formatted in hexadecimal type
+e- 2.0e30 Floating point number, scientific format
+
+5-Dottie Hawn has concoted an error-laden program. Help her find the mistakes.
+
+include <stdio.h>
+main
+(
+float g; h;
+float tax, rate;
+g = e21;
+tax = rate*g;
+)
+
+Pound sign missing in include statement.
+Main function has to have type and parenthesis for arguments, and 'void'
+keyword if no arguments are used.
+Semicolon is only mandatory at the end of the floating point variable
+declarations, otherwise it will be a syntax error.
+If 'g = e21' is an hexadecimal assignment operation, the '0x' or '0X'
+is missing.
+
+Fixed version:
+
+#include <stdio.h>
+int main(void)
+{
+    float g, h, tax, rate;
+    
+    g = 0xE21;
+    tax = rate * g;
+}
+
+6-Identify the data type (as used in declaration statement) and the printf()
+format specifier for each of the following constants:
+
+a-12	integer		int
+b-0X3	integer		int

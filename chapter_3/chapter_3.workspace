@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Chapter 3">
+		<Project filename="agesecs/agesecs.cbp" />
+		<Project filename="ascii/ascii.cbp" />
+		<Project filename="cups/cups.cbp" />
+		<Project filename="measure/measure.cbp" />
+		<Project filename="molecules/molecules.cbp" />
+		<Project filename="notation/notation.cbp" />
+		<Project filename="overflow/overflow.cbp" />
+		<Project filename="pumpkin/pumpkin.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Chapter 4">
+		<Project filename="downloading/downloading.cbp" />
+		<Project filename="firstlast/firstlast.cbp" />
+		<Project filename="formats/formats.cbp" />
+		<Project filename="gallons/gallons.cbp" />
+		<Project filename="nameandin/nameandin.cbp" />
+		<Project filename="names/names.cbp" />
+		<Project filename="scientific/scientific.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

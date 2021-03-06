@@ -1,0 +1,103 @@
+1. Run rev_question_1 C project and write your first and last name when it asks
+for your first name. What happens? Why?
+
+	When I entered my full name, I gave three inputs: "José" "Manuel" and
+"Salgueiro". scanf() reads an input until it reaches a blank and then stops
+reading. My middle name and lastname went to the next scanf() statements. That
+is the reason for the unexpected results.
+
+2. Assuming that each of the following examples is part of a complete program,
+what will each one print?
+
+	a. printf("He sold the painting for $%2.2f.\n", 2.345e2);
+
+	He sold the painting for $234.50
+
+	b. printf("%c%c%c\n", 'H', 105, '\41');
+
+	Hi!
+
+	c.
+	#define Q "His Hamlet was funny without being vulgar"
+
+	printf("%s has %d characters.\n", Q, strlen(Q));
+
+	His Hamlet was funny without being vulgar has 41 characters.
+
+	d. printf("Is %2.2e the same as %2.2f?\n, 1201.0, 1201.0);
+
+	Is 1.20e3 the same as 1201.00?
+
+3. In Question 2.c, what changes could you make so that string Q is printed out
+enclosed in double quotation marks?
+
+	To be able to print out the string Q enclosed in double quotation marks
+we have to use the escape character \":
+
+	printf("\"%s has %d characters.\"\n", Q, strlen(Q));
+
+4. It's find error time
+
+define B booboo
+define X 10
+
+main(int)
+{
+	int age;
+	char name;
+
+	printf("Please enter your first name.");
+	scanf("%s", name);
+
+	printf("All right, %c, what's your age?\n", name);
+	scanf("%f", age);
+
+	xp = age + X;
+
+	printf("That's a %s! You must be at least %d.\n", B, xp);
+	rerun 0;
+}
+
+-The define preprocessor directives have the # character missing
+-There are no #include preprocessor directives to include standard I/O library
+functions.
+-int main(void) instead of main(int)
+-When entering the age value, scanf uses a float format specifier instead of an
+integer one.
+-'xp' variable is not defined.
+-printf()'s third parameter is a variable not defined.
+-return 0; instead of rerun 0;
+
+Revised version of the program:
+
+#include <stdio.h>
+#define B booboo
+#define X 10
+
+int main(void)
+{
+	int age, xp;
+	char name;
+
+	printf("Please enter your first name.");
+	scanf("%s", name);
+
+	printf("All right, %c, what's your age?\n", name);
+	scanf("%d", age);
+
+	xp = age + X;
+
+	printf("That's a %s! You must be at least %d.\n", B, xp);
+	return 0;
+}
+
+6. What conversion specification would you use to print each of the following?
+
+	a. A decimal integer with a field equal to the number of digits. "%*d", number_of_digits, decimal_integer
+	b. A hexadecimal integer in the form 8A in a field width of 4. "%4X"
+	c. A floating-point number in the form 232.346 with a field width of 10. "%10.3f"
+	d. A floating-point number in the form 2.33e+002 with a field width of 12. "%12.2+e"
+	e. A string left justified in a field of width 30. "%30s
+
+7. Which conversion specification would you use to print each of the following?
+
